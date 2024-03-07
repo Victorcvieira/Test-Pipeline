@@ -44,6 +44,7 @@ jobs:
                           # Build and Deploy the Package
                           & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$package" -o "${{ github.workspace }}" -v $VERSION -l en-US
                           & "C:\\uipathcli\\tools\\uipcli.exe" package deploy "${{ github.workspace }}\$($Name).$VERSION.nupkg" "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
+                          } 
       # Persist build artifacts
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.0
