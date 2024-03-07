@@ -53,3 +53,8 @@ jobs:
              path: ${{ github.workspace }}/**
              if-no-files-found: error
              retention-days: 2
+      - name: "Run Process"
+        run: |         
+          shell: powershell.exe
+          command: 
+           . 'C:\\uipathcli\\tools\\uipcli.exe' -processName BasicTest "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
