@@ -1,0 +1,33 @@
+name: Run UiPath Process
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install UiPath CLI or any dependencies here
+
+    - name: Authenticate with UiPath Orchestrator
+      env:
+        UI_PATH_ORCHESTRATOR_URL: ${{secrets.UI_PATH_ORCHESTRATOR_URL}}
+        OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID}}
+        OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET}}
+      run: |
+        uipath-cli login --url $UI_PATH_ORCHESTRATOR_URL --clientId $OAUTH_CLIENT_ID --clientSecret $OAUTH_CLIENT_SECRET
+
+    - name: Run UiPath Process
+      run: |
+        uipath-cli execute --process "BasicTest"
