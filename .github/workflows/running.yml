@@ -19,7 +19,12 @@ jobs:
         python-version: '3.x'
 
     # Install UiPath CLI or any dependencies here
-
+    - name: Install UiPath CLI
+      run: |
+        curl -sL "https://github.com/UiPath/uipathcli/releases/latest/download/uipathcli-linux-amd64.tar.gz" | tar -xzv
+        unzip uipath-cli.zip
+        chmod +x uipath-cli
+        sudo mv uipath-cli /usr/local/bin/
     - name: Authenticate with UiPath Orchestrator
       env:
         UI_PATH_ORCHESTRATOR_URL: ${{secrets.UI_PATH_ORCHESTRATOR_URL}}
