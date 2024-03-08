@@ -24,35 +24,7 @@ jobs:
                  New-Item -Path "C:\\" -ItemType "directory" -Name "uipathcli";
                  Invoke-WebRequest "https://uipath.pkgs.visualstudio.com/Public.Feeds/_apis/packaging/feeds/1c781268-d43d-45ab-9dfc-0151a1c740b7/nuget/packages/UiPath.CLI.Windows/versions/23.6.8581.19168/content" -OutFile "C:\\uipathcli\\cli.zip";
                  Expand-Archive -LiteralPath "C:\\uipathcli\\cli.Zip" -DestinationPath "C:\\uipathcli";
-      # Use uipcli to package and deploy (for each project.json found)                           
-      - name: Pack and Deploy
-        run: |
-                foreach($package in Get-ChildItem -Path ${{ github.workspace }} -Recurse -Filter project.json -File)
-                       {    
-                          # Get some data from the package.json for package naming
-                          $json = Get-Content "$package" | Out-String | ConvertFrom-Json
-                          $foo = $json.projectVersion
-                          $Name=$json.name
-                          echo "::set-output name=PATH::$package"
-                          echo $foo
-                          $v= [version] "$foo"
-                          $newversion= "{0}.{1}.{2}.{3}" -f $v.Major, $v.Minor, ($v.Build),"${{github.run_number}}"
-                          $VERSION=[string]$newversion
-                          echo $VERSION
-                          echo $Name
-                          echo ${{ github.workspace }}\$Name.$VERSION.nupkg
-                          # Build and Deploy the Package
-                          & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$package" -o "${{ github.workspace }}" -v $VERSION -l en-US
-                          & "C:\\uipathcli\\tools\\uipcli.exe" package deploy "${{ github.workspace }}\$($Name).$VERSION.nupkg" "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
-                          } 
-      # Persist build artifacts
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.0
-        with:	 
-             name: ProjectFiles
-             path: ${{ github.workspace }}/**
-             if-no-files-found: error
-             retention-days: 2
+     
       - name: "Run Process"
         run: |         
-          "C:\\uipathcli\\tools\\uipcli.exe" -processName BasicTest "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
+          "C:\\uipathcli\\tools\\uipcli.exe" --process "BasicTest" "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "Shared" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}"
