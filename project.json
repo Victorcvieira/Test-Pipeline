@@ -1,14 +1,15 @@
 {
   "name": "GitHub-Pipeline",
-  "projectId": "101e3fb0-61b1-4095-ace6-e338dd7f6f92",
+  "projectId": "7eed7783-7adf-44f8-a2a8-0e526851562b",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.Mail.Activities": "[1.21.1]",
-    "UiPath.System.Activities": "[23.10.3]",
+    "UiPath.System.Activities": "[24.11.0-preview]",
+    "UiPath.System.Activities.Runtime": "24.11.0-preview",
     "UiPath.Testing.Activities": "[23.10.0]",
-    "UiPath.UIAutomation.Activities": "[23.10.7]"
+    "UiPath.UIAutomation.Activities.Runtime": "23.10.7"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -44,8 +45,11 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true,
     "saveToCloud": false
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
