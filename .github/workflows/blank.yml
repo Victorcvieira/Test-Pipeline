@@ -42,7 +42,7 @@ jobs:
                           echo $Name
                           echo ${{ github.workspace }}\$Name.$VERSION.nupkg
                           # Build and Deploy the Package
-                          & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$package" -o "${{ github.workspace }}" -v $VERSION -l en-US --libraryOrchestratorUrl "https://staging.uipath.com/" --libraryOrchestratorAccountForApp ${{secrets.ACCOUNT_NAME}} --libraryOrchestratorTenant ${{secrets.TENANT_NAME}} --libraryOrchestratorApplicationId "${{secrets.OAUTH_CLIENT_ID}}" --libraryOrchestratorApplicationSecret "${{secrets.OAUTH_CLIENT_SECRET}}" --libraryOrchestratorApplicationScope ${{secrets.OAUTH_CLIENT_SCOPES}}
+                          & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$package" -o "${{ github.workspace }}" -v $VERSION -l en-US --libraryOrchestratorUrl "https://staging.uipath.com/" --libraryOrchestratorAccountForApp ${{secrets.ACCOUNT_NAME}} --libraryOrchestratorTenant ${{secrets.TENANT_NAME}} --libraryOrchestratorApplicationId "f50245b6-fe68-4e98-878b-9f1ee5ba5b95" --libraryOrchestratorApplicationSecret "?Yk)nmWUMOPC2s_5" --libraryOrchestratorApplicationScope ${{secrets.OAUTH_CLIENT_SCOPES}}
                           & "C:\\uipathcli\\tools\\uipcli.exe" package deploy "${{ github.workspace }}\$($Name).$VERSION.nupkg" "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "${{secrets.ORCH_FOLDER}}" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}" -h Main.xaml 
                        }
       # Persist build artifacts
