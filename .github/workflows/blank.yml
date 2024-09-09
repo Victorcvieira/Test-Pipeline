@@ -28,7 +28,7 @@ jobs:
       - name: Pack and Deploy
         run: |
                           $outputDir = Join-Path $env:GITHUB_WORKSPACE "Output"
-                          & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$($env:GITHUB_WORKSPACE)\project.json" --output "$outputDir" --autoVersion --libraryOrchestratorUrl "https://staging.uipath.com" --libraryOrchestratorAccountForApp ${{secrets.ACCOUNT_NAME}} --libraryOrchestratorTenant ${{secrets.TENANT_NAME}} --libraryOrchestratorApplicationId "${{secrets.OAUTH_CLIENT_ID}}" --libraryOrchestratorApplicationSecret "${{secrets.OAUTH_CLIENT_SECRET}}" --libraryOrchestratorApplicationScope ${{secrets.OAUTH_CLIENT_SCOPES}}
+                          & "C:\\uipathcli\\tools\\uipcli.exe" package pack "$($env:GITHUB_WORKSPACE)\project.json" --output "$outputDir" --autoVersion --libraryOrchestratorUrl "https://staging.uipath.com/" --libraryOrchestratorAccountForApp ${{secrets.ACCOUNT_NAME}} --libraryOrchestratorTenant ${{secrets.TENANT_NAME}} --libraryOrchestratorApplicationId "${{secrets.OAUTH_CLIENT_ID}}" --libraryOrchestratorApplicationSecret "${{secrets.OAUTH_CLIENT_SECRET}}" --libraryOrchestratorApplicationScope ${{secrets.OAUTH_CLIENT_SCOPES}}
                           & "C:\\uipathcli\\tools\\uipcli.exe" package deploy "$outputDir" "https://staging.uipath.com/" "${{secrets.TENANT_NAME}}" -A ${{secrets.ACCOUNT_NAME}} -I ${{secrets.OAUTH_CLIENT_ID}} -S "${{secrets.OAUTH_CLIENT_SECRET}}" -o "${{secrets.ORCH_FOLDER}}" --applicationScope "${{secrets.OAUTH_CLIENT_SCOPES}}" -h Main.xaml
       # Persist build artifacts
       - name: Upload a Build Artifact
