@@ -4,11 +4,11 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "Methodist.Library": "[1.0.2]",
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.System.Activities": "[23.10.6]",
     "UiPath.Testing.Activities": "[23.10.1]",
-    "UiPath.UIAutomation.Activities.Runtime": "23.10.11",
-    "YazakiLibrary": "[1.0.1]"
+    "UiPath.UIAutomation.Activities.Runtime": "24.10.10"
   },
   "webServices": [],
   "entitiesStores": [],
