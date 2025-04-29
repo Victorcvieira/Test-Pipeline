@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3YeeGmJgcSR/7+Z+dn0pFFBawLqxDV3SIuErA1ZR0Z2cortgJLujEGrRdLQ2DGK349Km5QwJyKcSia1h9ThNxw==",
+  "dgSpecHash": "Cw2vcrD6w1D6cdDBS6gwoA0pXGM3DsYUm9bUKgtQGu0kodCTmHC+fT+O2T4xSKOZm0Z6SN5E0KsywvGB6mJ9GA==",
   "success": true,
   "projectFilePath": "C:\\temp\\UiPathProjects\\Test-Pipeline\\.local\\",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\victor.vieira\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\victor.vieira\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",
     "C:\\Users\\victor.vieira\\.nuget\\packages\\markdig.signed\\0.21.1\\markdig.signed.0.21.1.nupkg.sha512",
-    "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\methodist.library.1.0.6.nupkg.sha512",
+    "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\methodist.library.1.0.7.nupkg.sha512",
     "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
     "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\microsoft.aspnetcore.connections.abstractions.3.1.6.nupkg.sha512",

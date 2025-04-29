@@ -3,13 +3,13 @@
     {
       "Package": {
         "Id": "Methodist.Library",
-        "Version": "1.0.6"
+        "Version": "1.0.7"
       },
       "Assemblies": [
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib/net8.0-windows7.0/Methodist Library.Core.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib/net8.0-windows7.0/Methodist Library.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib/net8.0-windows7.0/Methodist Library_Expressions_45057425.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib/net8.0-windows7.0/Methodist Library_Expressions_59610102.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib/net8.0-windows7.0/Methodist Library.Core.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib/net8.0-windows7.0/Methodist Library.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib/net8.0-windows7.0/Methodist Library_Expressions_57259363.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib/net8.0-windows7.0/Methodist Library_Expressions_58153438.dll",
         "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.1\\lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll",
         "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
         "C:\\Users\\victor.vieira\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
@@ -66,7 +66,7 @@
         "C:\\Users\\victor.vieira\\.nuget\\packages\\uipath.vision\\3.14.2\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\victor.vieira\\.nuget\\packages\\uipath.vision\\3.14.2\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
-      "Path": "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6"
+      "Path": "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7"
     },
     {
       "Package": {
@@ -369,7 +369,7 @@
     },
     "Methodist.Library": {
       "Id": "Methodist.Library",
-      "Version": "1.0.6",
+      "Version": "1.0.7",
       "Dependencies": [
         {
           "Item1": "UiPath.UIAutomation.Activities",
@@ -4702,15 +4702,15 @@
     {
       "Package": {
         "Id": "Methodist.Library",
-        "Version": "1.0.6"
+        "Version": "1.0.7"
       },
       "Assemblies": [
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib\\net8.0-windows7.0\\Methodist Library.Core.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib\\net8.0-windows7.0\\Methodist Library.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib\\net8.0-windows7.0\\Methodist Library_Expressions_45057425.dll",
-        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6\\lib\\net8.0-windows7.0\\Methodist Library_Expressions_59610102.dll"
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib\\net8.0-windows7.0\\Methodist Library.Core.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib\\net8.0-windows7.0\\Methodist Library.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib\\net8.0-windows7.0\\Methodist Library_Expressions_57259363.dll",
+        "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7\\lib\\net8.0-windows7.0\\Methodist Library_Expressions_58153438.dll"
       ],
-      "Path": "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.6"
+      "Path": "C:\\Users\\victor.vieira\\.nuget\\packages\\methodist.library\\1.0.7"
     },
     {
       "Package": {
