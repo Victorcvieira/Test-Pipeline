@@ -4,7 +4,7 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "Methodist.Library": "[1.0.8]",
+    "Methodist.Library": "[1.0.9]",
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.System.Activities": "[23.10.6]",
     "UiPath.Testing.Activities": "[23.10.1]",
